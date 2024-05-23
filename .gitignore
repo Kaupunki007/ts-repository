@@ -1,0 +1,27 @@
+# Ignore .NET files
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build results
+*.dll
+*.exe
+*.so
+*.dylib
+*.log
+*.sql
+*.pdb
+
+# Ignore build directories
+out/
+
+# Ignore Visual Studio Code settings folder
+.vscode/
+
+# Ignore other development environment files
+.idea/
+.DS_Store
+*.sw?

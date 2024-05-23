@@ -1,0 +1,21 @@
+schemaVersion: '2.0.0'
+
+# Define image under test
+images:
+  - name: request-details-app
+    tests:
+      # Test to check if the image metadata is correct
+      - name: "Check labels"
+        type: "metadata"
+        metadataTest:
+          # Image should have the correct entrypoint
+          entrypoint: ["dotnet", "RequestDetailsApp.dll"]
+
+      # Test to check if the application is running
+      - name: "Check if application is running"
+        type: "command"
+        commandTest:
+          # Command to execute
+          command: [ "curl", "http://localhost:8080" ]
+          # Expected output
+          expectedOutput: ["Welcome to our API, here are your details for the request"]
